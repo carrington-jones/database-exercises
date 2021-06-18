@@ -1,8 +1,11 @@
 USE codeup_test_db;
 
--- SELECT * FROM albums;
--- SELECT * FROM albums WHERE release_date < 1980;
--- SELECT * FROM albums WHERE artist = 'Michael Jackson';
+SELECT 'All albums in table' AS 'All albums';
+SELECT * FROM albums;
+SELECT 'All albums released before 1980' AS 'Before 1980';
+SELECT * FROM albums WHERE release_date < 1980;
+SELECT 'Michael Jackson Albums' AS 'Michael Jackson';
+SELECT * FROM albums WHERE artist = 'Michael Jackson';
 
 
 

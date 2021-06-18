@@ -11,4 +11,4 @@ SELECT album_name FROM albums WHERE release_date >= 1990 && release_date <= 2000
 SELECT 'Albums with sales over 20 Million' AS 'Cash';
 SELECT album_name FROM albums WHERE sales = sales < 20.0;
 SELECT 'Rock Albums' AS 'Van Halen not Van Hagar';
-SELECT genre FROM albums WHERE genre = 'Rock';
+SELECT album_name FROM albums WHERE genre = 'Rock';
