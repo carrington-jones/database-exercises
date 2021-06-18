@@ -23,9 +23,9 @@ SELECT 'Multiplied sales by 10' AS 'Sales';
 
 
 UPDATE albums
-SET release_date = 1871
+SET release_date = (release_date - 100)
 WHERE release_date < 1980;
-SELECT 'Changed all release dates before 1980 to 1871' AS 'Release Date';
+SELECT 'Changed all release dates before 1980 to 100 years in the past' AS 'Release Date';
 
 UPDATE albums
 SET artist = 'Peter Jackson'
