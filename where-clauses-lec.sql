@@ -27,9 +27,9 @@ SELECT birth_date FROM employees WHERE birth_date NOT LIKE '195%'; #Shows employ
 SELECT birth_date, hire_date FROM employees WHERE birth_date NOT LIKE '195%'
                                               AND hire_date NOT LIKE '199%';
 
-#This will NOT select all employees in January 1963. It will select OCTOBER NOVEMBER and DECEMBER.
+--#This will NOT select all employees in January 1963. It will select OCTOBER NOVEMBER and DECEMBER.
     SELECT * FROM employees WHERE birth_date LIKE '1963-1%';
-#This will:
+--#This will:
 SELECT * FROM employees WHERE birth_date LIKE '1963-01%';
 
 SELECT * FROM employees WHERE birth_date LIKE '1963-01%' ORDER BY birth_date;
