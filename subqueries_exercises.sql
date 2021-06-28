@@ -11,16 +11,16 @@ WHERE hire_date IN (
 # Find all titles
 SELECT title
 FROM titles
-WHERE emp_no IN(
+WHERE emp_no IN (
     SELECT emp_no
     FROM employees
     WHERE first_name = 'Aamod'
-    );
+);
 
 # Find unique titles
 SELECT DISTINCT title
 FROM titles
-WHERE emp_no IN(
+WHERE emp_no IN (
     SELECT emp_no
     FROM employees
     WHERE first_name = 'Aamod'
@@ -40,16 +40,16 @@ WHERE gender = 'F'
 # Find all the department names that currently have female managers.
 SELECT dept_name
 FROM departments
-WHERE dept_no IN(
+WHERE dept_no IN (
     SELECT dept_no
     FROM dept_manager
-    WHERE emp_no IN(
+    WHERE emp_no IN (
         SELECT emp_no
         FROM employees
         WHERE gender = 'F'
-        AND to_date > NOW()
-        )
-    );
+          AND to_date > NOW()
+    )
+);
 
 #Find the first and last name of the employee with the highest salary.
 SELECT first_name, last_name
@@ -60,5 +60,5 @@ WHERE emp_no = (
     WHERE salary = (
         SELECT MAX(salary)
         FROM salaries
-        )
-    );
+    )
+);
